@@ -1,8 +1,6 @@
-import React, { useContext } from "react";
-import MarkdownContext from "../../MarkdownContext";
+import React from "react";
 import ReactMarkdown from "react-markdown";
 function Preview({ input }) {
-  // const { input } = useContext(MarkdownContext);
   return (
     <div className="renderedArea">
       <div className="editorHeader">

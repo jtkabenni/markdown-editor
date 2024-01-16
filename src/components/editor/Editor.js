@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 function Editor({ input, updateInput }) {
   const [wordCount, setWordCount] = useState(0);
-
   function countWords() {
     const trimmedText = input.trim();
     const words = trimmedText.split(/\s+/);
@@ -29,6 +28,7 @@ function Editor({ input, updateInput }) {
 
       <hr></hr>
       <textarea
+        placeholder="Type your markdown here..."
         className="textarea"
         onChange={(e) => {
           updateInput(e.target.value);

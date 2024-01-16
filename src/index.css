@@ -45,6 +45,11 @@ textarea {
   resize: none; /*remove the resize handle on the bottom right*/
 }
 
+::placeholder {
+  color: rgb(205, 205, 205);
+  opacity: 1; /* Firefox */
+}
+
 .renderedArea {
   text-align: left;
   width: 50%;
