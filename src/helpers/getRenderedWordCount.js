@@ -16,7 +16,7 @@ function countWordsAndCharacters(htmlElementId) {
 
     // Calculate character count
     var characterCount = textContent.length;
-
+    console.log(wordCount, characterCount);
     // Return an object with word count and character count
     return {
       wordCount: wordCount,

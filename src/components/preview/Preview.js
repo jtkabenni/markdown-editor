@@ -2,14 +2,21 @@ import React, { useState, useEffect, useRef } from "react";
 import countWordsAndCharacters from "../../helpers/getRenderedWordCount";
 import ReactMarkdown from "react-markdown";
 function Preview({ input }) {
-  const { wordCount, characterCount } = countWordsAndCharacters("rendered");
+  const [wordCount, setWordCount] = useState(0);
+  const [charCount, setCharacterCount] = useState(0);
 
+  useEffect(() => {
+    // Access the input element
+    const { wordCount, characterCount } = countWordsAndCharacters("rendered");
+    setWordCount(wordCount);
+    setCharacterCount(characterCount);
+  }, [input]);
   return (
     <div className="renderedArea">
       <div className="editorHeader">
         <h2>Rendered Markdown</h2>
         <div className="counts">
-          <p>{characterCount} characters</p>
+          <p>{charCount} characters</p>
           <p>{wordCount} words</p>
         </div>
       </div>
