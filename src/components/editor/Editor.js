@@ -20,10 +20,6 @@ function Editor({ input, updateInput }) {
     <div className="inputArea">
       <div className="editorHeader">
         <h2>Editor</h2>
-        <div className="counts">
-          <p>{input.length} characters</p>
-          <p>{wordCount} words</p>
-        </div>
       </div>
 
       <hr></hr>
